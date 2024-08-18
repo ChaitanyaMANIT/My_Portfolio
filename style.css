@@ -1,0 +1,328 @@
+*
+{
+margin:0;
+padding:0;
+box-sizing: border-box;
+
+}
+
+body{
+    background: rgba(28, 30, 33, 0.916);
+    color: white;
+    
+}
+.header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+padding: 20px;
+background: yellowgreen;
+display: flex;
+justify-content: space-around;
+align-items: center;
+z-index: 100;
+
+}
+.logo.image{
+    width:120px;
+    height:60%;
+    padding:10px;
+    /*font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;*/
+
+}
+.navbar a{
+    flex-shrink: 1;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 25px;
+
+}
+.navbar a.Active{
+    background: linear-gradient(45deg,red,blue);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text ;
+
+}
+.navbar a:hover{
+    background: linear-gradient(45deg,red,blue);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text ;
+}
+
+.image{
+    width:120px;
+    height:70%;
+    margin-left:20px;
+}
+.here{
+    display: flex;
+    width:100%;
+    height:100vh;
+    align-items: center;
+    padding:0 10%;
+    justify-content: space-between;
+    margin-top:15px ;
+   
+}
+.content{
+    padding:30px ;
+    max-width: 750px;
+}
+.intro{
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+.content p{
+    font-size: 32px;
+    font-weight: 500;
+}
+.img{
+    width: 230px;
+    height:50vh;
+    justify-content:right;
+    display: flex;
+    margin-right: 30px;
+    border: 5px double white;
+    transform: scale(1);
+    
+    
+}
+.edu{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.man{
+    width:200px;
+    height:50%;
+    margin-left:25px;
+    justify-content: space-around;
+    background:  rgba(28, 30, 33, 0.916);
+    animation: red-to-black  2s linear 0s 25  alternate-reverse ;
+    
+    
+   
+}
+.ok{
+    
+        display: flex;
+        width:100%;
+        height:100vh;
+        align-items: center;
+        padding:0 10%;
+        justify-content: space-between;
+        margin-top:15px ;
+        margin-left: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.container{
+    background: rgb(192, 192, 228);
+    border: 10px solid black;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;/*center / flex-end / space-between*/
+    align-items: center;/*flex-end,flex-start,center,baseline*/
+}
+.container-item{
+    
+    margin-right:25px ;
+    margin-left: 25px;
+    border: 10px solid black ;
+}
+.lit{
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+@keyframes red-to-black{
+    0%{background: rgba(28, 30, 33, 0.916) ; transform: translate(0px,0px);}
+    50%{background: rgba(28, 30, 33, 0.916);transform: translate(10px,10px);}
+    100%{background: rgba(28, 30, 33, 0.916);transform: translate(20px,20px);}
+}
+
+footer{
+    position: relative;
+    width:100%;
+    background:#3586ff ;
+    min-height: 100px;
+    padding:20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+footer .social_icon li{
+    list-style: none;
+}
+footer .social_icon li a{
+    font-size:2em;
+    color: white;
+    margin:0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover{
+transform: translateY(-10px);
+}
+footer .wave{
+    position:absolute;
+    top: -100px;
+    left:0;
+    width: 100%;
+    height: 100px;
+   /* background: red;*/
+    background-image: url(https://i.postimg.cc/rwJHvzCK/wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom:0;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom:10px;
+    animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom:15px;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom:20px;
+    animation: animateWave 3s linear infinite;
+}
+
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_02
+{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .button1 {
+    background-color: rgb(81, 198, 63);
+    color: white;
+    border: 2px solid #04AA6D;
+    justify-content: center;
+    transition: 2s;
+    box-shadow: 0 5px 0 black;
+  }
+  .button1:active{
+    box-shadow: none;
+    transform: translate(5px);
+  }
+  
+  .button1:hover {
+    background-color: #aa0404;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: rgb(81, 198, 63);
+    color: white;
+    border: 2px solid #008CBA;
+    justify-content: center;
+    transition: 2s;
+    box-shadow: 0 5px 0 black;
+  }
+  .button2:active{
+    box-shadow: none;
+    transform: translate(5px);
+  }
+  
+  .button2:hover {
+    background-color:#aa0404;
+    color: white;
+  }
+  .bot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    margin: 0;
+  }
+  .containerhi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    
+  }
+  
+  
+  .fill1{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 60px;
+    border:5px solid black;
+    transform: translateY(10px,10px);
+
+  }
+  .fill2{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 60px;
+    border:5px solid black;
+
+  }
+  
